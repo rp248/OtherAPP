@@ -26,15 +26,17 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void startLocalBoundServiceInAnotherApp(View view){
+    public void starBoundServiceInAnotherApp(View view){
     	Intent intent = new Intent();
     	intent.setAction("com.example.services.binders.START_LOCAL_BOUND_SERVICE");
     	bindService(intent, localBoundServiceConnection = new LocalBoundServiceConnection(), Context.BIND_AUTO_CREATE);
     }
-    public void startLocalBoundServiceInAnotherAppUsingStart(View view){
-    	Intent intent = new Intent();
-    	intent.setAction("com.example.services.binders.START_LOCAL_BOUND_SERVICE");
-    	startService(intent);
+    
+    public void stopBoundServiceInAnotherAppUsingUnBindSerice(View view){
+//    	Intent intent = new Intent();
+//    	intent.setAction("com.example.services.binders.START_LOCAL_BOUND_SERVICE");
+//    	startService(intent);
+    	unbindService(localBoundServiceConnection);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

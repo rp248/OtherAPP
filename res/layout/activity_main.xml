@@ -10,13 +10,13 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startLocalBoundServiceInAnotherAppUsingBind"
-        android:text="START LOCAL BOUND SERVICE IN ANOTHER APP_USING BIND" />
+        android:onClick="starBoundServiceInAnotherApp"
+        android:text="START BOUND SERVICE IN SERVICES APP_USING BIND" />
      <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startLocalBoundServiceInAnotherAppUsingStart"
-        android:text="START LOCAL BOUND SERVICE IN ANOTHER APP_USING START" />
+        android:onClick="stopBoundServiceInAnotherAppUsingUnBindSerice"
+        android:text="STOP BOUND SERVICE IN SERVICES APP_USING UNBIND SERVICE" />
 
 </LinearLayout>
